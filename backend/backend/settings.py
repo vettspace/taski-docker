@@ -10,7 +10,13 @@ SECRET_KEY = (
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:8000']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '127.0.0.1:8000',
+    '51.250.98.57',
+    'taskspace.ddns.net',
+]
 
 
 # Application definition
@@ -71,10 +77,9 @@ DATABASES = {
         'USER': os.getenv('POSTGRES_USER', 'django'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
         'HOST': os.getenv('DB_HOST', ''),
-        'PORT': os.getenv('DB_PORT', 5432)
+        'PORT': os.getenv('DB_PORT', 5432),
     }
 }
-
 
 
 # Password validation
